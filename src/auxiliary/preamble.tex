@@ -1,0 +1,64 @@
+% Moderncv style
+\moderncvstyle{casual}
+\moderncvcolor{blue}
+\renewcommand{\familydefault}{\sfdefault}
+
+% Additional packages
+\usepackage{datetime}
+\newdateformat{properdateformat}{\THEDAY\ \monthname[\THEMONTH] \THEYEAR}
+\properdateformat
+\usepackage{ifthen}
+\usepackage{lipsum}
+
+% Use page numbers
+\ifnum\value{npages}<3
+    \nopagenumbers{}
+\fi
+
+% Adjust the page margins
+\usepackage[scale=0.85]{geometry}
+
+% Extra social media symbols
+\usepackage{academicons}
+\newcommand*\arxivsocialsymbol{{\aiarXiv~}}
+\newcommand*\googlescholarsocialsymbol{{\aiGoogleScholar~}}
+\newcommand*\orcidsocialsymbol{{\aiOrcid~}}
+\newcommand*\researchgatesocialsymbol{{\aiResearchGate~}}
+\newcommand*\skypesocialsymbol{{\faSkype~}}
+
+% Commands for publications
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{\aiDoi~\texttt{#1}}}
+\newcommand{\arXiv}[1]{\href{https://arxiv.org/abs/#1}{\aiarXiv~\texttt{#1}}}
+\newcommand{\http}[1]{\href{http://#1}{\faExternalLink~\texttt{#1}}}
+\newcommand{\https}[1]{\href{https://#1}{\faExternalLink~\texttt{#1}}}
+\newcommand{\OA}{{\aiOpenAccess}}
+\newcommand{\Marcon}{\textbf{Marcon}}
+\newcommand{\J}{\textbf{J}}
+
+% Commands for links with symbol
+\newcommand{\exref}[2]{\href{#1}{#2~\faExternalLink}}
+\newcommand{\oaref}[2]{\href{#1}{#2~\OA}}
+\newcommand{\inref}[2]{\hyperref[#1]{\emph{#2}~\faLink}}
+
+% Biographic information
+\name{Julian Marcon}{PhD}
+\title{\today}
+\phone[mobile]{\href{tel:+16502509488}{+1~(650)~250~9488}}
+\email{marconjulian@gmail.com}
+\ifnum\value{npages}>1
+    \social[skype][join.skype.com/invite/hGl9Z7v7w3OX]{julianmarcon}
+\fi
+\social[linkedin]{marconjulian}
+\ifnum\value{npages}>1
+    \social[github]{j-marcon}
+\fi
+\ifnum\value{npages}>2
+    \social[researchgate][www.researchgate.net/profile/Julian\_Marcon]{Julian\_Marcon}
+    \social[googlescholar][scholar.google.com/citations?user=eX7lCHwAAAAJ]{Julian Marcon}
+    \social[arxiv][arxiv.org/a/marcon\_j\_1]{marcon\_j\_1}
+    \social[orcid][orcid.org/0000-0003-3745-7306]{0000-0003-3745-7306}
+\fi
+
+% Publication file
+\usepackage[backend=biber]{biblatex}
+\addbibresource{auxiliary/publications.bib}

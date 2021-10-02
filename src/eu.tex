@@ -1,0 +1,23 @@
+%!TEX program = lualatex
+
+\documentclass[11pt,a4paper,sans]{moderncv}
+
+% Control the number of pages
+\newcounter{npages}
+\setcounter{npages}{2} % 1, 2 or more
+
+\input{auxiliary/preamble.tex}
+
+\begin{document}
+
+\makecvtitle
+
+\input{sections/overview.tex}
+\input{sections/experience.tex}
+\input{sections/education.tex}
+\input{sections/programming.tex}
+\input{sections/software.tex}
+\input{sections/languages.tex}
+\input{sections/publications.tex}
+
+\end{document}
