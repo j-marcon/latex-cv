@@ -2,10 +2,13 @@
 
 ## Prerequisites
 
-The main prerequisite of this project is a LaTeX distribution.
-This is currently tested with [TeX Live](https://tug.org/texlive/) on Microsoft Windows 11, but should also be compatible with any other recent distribution.
+The main prerequisite of this repository is a LaTeX distribution.
+This project is currently tested against [TeX Live](https://tug.org/texlive/) on Microsoft Windows 11, but should also be compatible with any other recent distribution.
 The main LaTeX package used is [moderncv](https://ctan.org/pkg/moderncv);
 all other packages are fairly standard.
+
+[CMake](https://cmake.org/) is used for cross-platform build automation;
+however, the documents may also be compiled with `latexmk` or directly with LuaLaTeX.
 
 ## Structure of repository
 
@@ -21,14 +24,22 @@ all other packages are fairly standard.
 
 ## Build
 
-At the moment, the CV files can be compiled using `latexmk`, e.g.:
+The documents may be compiled using the standard `CMake` build procedure, e.g. running from the root directory:
 ```
-cd src
-latexmk -synctex=1 -interaction=nonstopmode -file-line-error -lualatex -outdir=. us.tex
+cmake -S . -B build
+cmake --build build --parallel
+```
+To compile only one of the main documents, its name can be passed as a target to the second command, e.g.:
+```
+cmake --build build --target us
 ```
 
-Implementation of cross-platform build automation is underway with CMake.
+Alternatively, the documents may be compiled using `latexmk`, e.g.:
+```
+cd src
+latexmk -lualatex us.tex
+```
 
 ## Acknowledgments
 
-Special thanks to [Dave Moxey](https://github.com/mdave) for some of his comments and feedback.
+Special thanks to [Dave Moxey](https://github.com/mdave) for his feedback and help.
