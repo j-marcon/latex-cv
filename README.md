@@ -9,6 +9,7 @@ all other packages are fairly standard.
 
 [CMake](https://cmake.org/) is used for cross-platform build automation;
 however, the documents may also be compiled with `latexmk` or directly with LuaLaTeX.
+Under Windows, the Developer PowerShell for [Visual Studio](https://visualstudio.microsoft.com/vs/) is needed for build capabilities.
 
 ## Structure of repository
 
@@ -24,12 +25,18 @@ however, the documents may also be compiled with `latexmk` or directly with LuaL
 
 ## Build
 
-The documents may be compiled using the standard `CMake` build procedure, e.g. running from the root directory:
+The documents may be compiled using the standard `CMake` build procedure.
+If `CV_ROOT` is the path to this repository, the build procedure would look like this:
 ```
-cmake -S . -B build
-cmake --build build --parallel
+cd $CV_ROOT
+cmake -S . -B build            # generate the project build system
+cmake --build build --parallel # build the project
+cmake --install build          # install the project
 ```
-To compile only one of the main documents, its name can be passed as a target to the second command, e.g.:
+The last command will install the PDF documents in a `bin` directory by default.
+The `--install-prefix <dir>` option may be used with the generate command or `--prefix <dir>` with the install command to change the installation directory.
+
+To compile only one of the main documents, its name can be passed as a target to the build command, e.g.:
 ```
 cmake --build build --target us
 ```
@@ -39,6 +46,7 @@ Alternatively, the documents may be compiled using `latexmk`, e.g.:
 cd src
 latexmk -lualatex us.tex
 ```
+This method is not actively tested but should work.
 
 ## Acknowledgments
 
