@@ -40,3 +40,9 @@ jobs:
       # Install the PDF documents in the bin directory
       run: cmake --install ${{github.workspace}}/build
       
+    - name: Store artifacts
+      # Store the PDF documents for download
+      uses: actions/upload-artifact@v2
+      with:
+        name: pdf
+        path: bin
