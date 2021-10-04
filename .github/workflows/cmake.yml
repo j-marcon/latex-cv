@@ -25,7 +25,7 @@ jobs:
     # Install Tex Live on runner
       run: |
         sudo apt-get update
-        sudo apt-get install texlive
+        sudo apt-get install texlive-full
 
     - name: Configure CMake
       # Configure CMake in a 'build' subdirectory. `CMAKE_BUILD_TYPE` is only required if you are using a single-configuration generator such as make.
