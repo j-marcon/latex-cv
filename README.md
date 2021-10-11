@@ -3,13 +3,15 @@
 ## Prerequisites
 
 The main prerequisite of this repository is a LaTeX distribution.
-This project is currently tested against [TeX Live](https://tug.org/texlive/) on Microsoft Windows 11, but should also be compatible with any other recent distribution.
+This project is currently tested against [TeX Live](https://tug.org/texlive/), but should also be compatible with any other distribution.
 The main LaTeX package used is [moderncv](https://ctan.org/pkg/moderncv);
 all other packages are fairly standard.
 
-[CMake](https://cmake.org/) is used for cross-platform build automation;
+[CMake](https://cmake.org/) v3.21 (or later) is used for cross-platform build automation;
 however, the documents may also be compiled with `latexmk` or directly with LuaLaTeX.
-Under Windows, the Developer PowerShell for [Visual Studio](https://visualstudio.microsoft.com/vs/) is needed for build capabilities.
+On Microsoft Windows, the Developer PowerShell for [Visual Studio](https://visualstudio.microsoft.com/vs/) is needed alongside CMake.
+
+This project has been tested on Microsoft Windows 11 as well as Ubuntu 18 (through the Windows Subsystem for Linux) and 20 (through the GitHub Actions virtual environments) but should work on any other system supported by CMake with a compatible LaTeX distribution.
 
 ## Structure of repository
 

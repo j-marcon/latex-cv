@@ -2,6 +2,7 @@ Aghora
 Aimee
 centroidal
 CGPA
+CMake
 Couaillier
 electromagnetics
 EPSRC
