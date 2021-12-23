@@ -11,6 +11,15 @@ set(SOURCE_DIR "${CV_SOURCE_DIR}/src")
 set(BUILD_DIR "${CV_BINARY_DIR}")
 set(DOCS "us" "eu" "academic")
 
+set(AUXILIARY "preamble.tex" "publications.bib")
+list(TRANSFORM AUXILIARY PREPEND "${SOURCE_DIR}/auxiliary/")
+
+set(SECTIONS "affiliations" "education" "experience" "grants" "honours" "languages" "overview" "programming" "publications" "software" "volunteering")
+list(TRANSFORM SECTIONS PREPEND "${SOURCE_DIR}/sections/")
+list(TRANSFORM SECTIONS APPEND ".tex")
+
+set(DEPENDENCIES "${AUXILIARY}" "${SECTIONS}")
+
 if(CMAKE_INSTALL_PREFIX_INITIALIZED_TO_DEFAULT)
     set(CMAKE_INSTALL_PREFIX "${CV_SOURCE_DIR}/bin" CACHE PATH "..." FORCE)
 endif()
@@ -20,7 +29,7 @@ foreach(DOC IN LISTS DOCS)
 
     add_custom_command(OUTPUT "${DOC}.bcf"
             COMMAND "${LUALATEX_COMPILER}" "-draftmode" "-interaction=batchmode" "-file-line-error" "-recorder" "--output-directory=${BUILD_DIR}" "${DOC}"
-            DEPENDS "${DOC}.tex"
+            DEPENDS "${SOURCE_DIR}/${DOC}.tex" "${DEPENDENCIES}"
             BYPRODUCTS "${DOC}.aux" "${DOC}.fls" "${DOC}.log" "${DOC}.out" "${DOC}.pdf" "${DOC}.run.xml"
             WORKING_DIRECTORY "${SOURCE_DIR}"
             COMMENT "${DOC}: LuaLaTeX pass 1")
