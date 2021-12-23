@@ -2,6 +2,7 @@ Aghora
 Aimee
 centroidal
 CGPA
+Châtillon
 CMake
 Couaillier
 electromagnetics
@@ -29,6 +30,7 @@ nonstopmode
 NYIT
 odowska
 oldstyle
+ONERA
 OOFELIE
 opto
 outdir
