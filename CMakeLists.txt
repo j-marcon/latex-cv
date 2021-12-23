@@ -20,6 +20,7 @@ foreach(DOC IN LISTS DOCS)
 
     add_custom_command(OUTPUT "${DOC}.bcf"
             COMMAND "${LUALATEX_COMPILER}" "-draftmode" "-interaction=batchmode" "-file-line-error" "-recorder" "--output-directory=${BUILD_DIR}" "${DOC}"
+            DEPENDS "${DOC}.tex"
             BYPRODUCTS "${DOC}.aux" "${DOC}.fls" "${DOC}.log" "${DOC}.out" "${DOC}.pdf" "${DOC}.run.xml"
             WORKING_DIRECTORY "${SOURCE_DIR}"
             COMMENT "${DOC}: LuaLaTeX pass 1")
