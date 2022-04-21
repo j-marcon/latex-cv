@@ -1,5 +1,12 @@
 \vbox{
 \section{Experience}
+\cventry{present\\Apr 2022}{Senior Operations Researcher}{6 River Systems}{remote --- San Francisco Bay Area, CA, USA}{}
+{
+    Designing, prototyping, and implementing new algorithms to increase the efficiency of 6 River Systems' products, reporting directly to the CTO.
+}
+}
+
+\vbox{
 \cventry{Jan 2022\\Jan 2020}{Postdoctoral Fellow}{NASA Ames Research Center}{Moffett Field, CA, USA}{}
 {
     Automated adjoint code generation from tangent linearisations;
@@ -26,6 +33,9 @@
 {
     Automated 2D structured and 3D semi-structured mesh generation\ifnum\value{npages}>1
         \ in \inref{sec:software}{NekMesh}\fi;
+    developed cross fields\ifnum\value{npages}>1
+        \ in \inref{sec:software}{NekMesh}\fi
+    \ to automate the generation of quadrilateral block-structured, high-order meshes;
     implemented variational \emph{r}-adaptation\ifnum\value{npages}>1
         \ in \inref{sec:software}{NekMesh}\fi;
     applied \emph{rp}-adaptation
@@ -34,26 +44,21 @@
     \fi
     to lower the cost of compressible flow simulations\ifnum\value{npages}>1
         \ using the spectral/\emph{hp} element methods;
-        published 2~journal articles and 4~conference papers;
-        gave 1~popularisation video interview, 7~conference talks and 2~poster presentations\ifnum\value{npages}>2;
+        published 3~journal articles and 5~conference papers;
+        gave 1~popularisation video interview, 12~conference talks and 2~poster presentations\ifnum\value{npages}>2;
             funded by \inref{sec:grants}{a Marie Sk\l{}odowska-Curie fellowship and an EPSRC grant}\fi\fi.
-    Completed secondments at:
-    \begin{itemize}
-        \item \emph{ONERA --- The French Aerospace Lab}, Châtillon, France, Jan--Feb 2018:\\
-            Applied mesh \emph{r}-adaptation driven by error estimates\ifnum\value{npages}>1
-            from the \emph{Aghora} solver;
-            gave 1~conference talk\ifnum\value{npages}>2;
-                hosted by Dr.~Vincent~Couaillier, Dr.~Marta~de~la~Llave~Plata and Fabio~Naddei\fi\fi.
-        \item \emph{San Diego State University}, San Diego, CA, USA, Jul--Sep 2018:\\
-            Developed cross fields
-            \ifnum\value{npages}>1
-                in \inref{sec:software}{NekMesh}
-            \fi
-            to automate the generation of quadrilateral block-structured, high-order meshes\ifnum\value{npages}>1;
-                published 1~journal article and 1~conference paper;
-                gave 4~conference talks\ifnum\value{npages}>2;
-                    hosted by Prof.~David~A.~Kopriva\fi\fi.
-    \end{itemize}
+    \ifnum\value{npages}>1
+        Completed secondments at\ifnum\value{npages}>2:
+            \begin{itemize}
+                \item \emph{ONERA --- The French Aerospace Lab}, Châtillon, France, Jan--Feb 2018:\\
+                        Hosted by Dr.~Vincent~Couaillier, Dr.~Marta~de~la~Llave~Plata and Fabio~Naddei.
+                \item \emph{San Diego State University}, San Diego, CA, USA, Jul--Sep 2018:\\
+                        Hosted by Prof.~David~A.~Kopriva.
+            \end{itemize}
+        \else
+            \ ONERA --- The French Aerospace Lab, and San Diego State University.
+        \fi
+    \fi
 }
 }
 
@@ -84,16 +89,16 @@
 {
     Carried out multiphysics analyses\ifnum\value{npages}>1
         \ in \inref{sec:software}{OOFELIE::Multiphysics}\fi;
-    trained, supported and provided consulting to customers;
-    tested and validated new features;
-    generated software documentation.
+        provided training, support and consulting\ifnum\value{npages}>2 to customers;
+        tested and validated new features;
+        generated software documentation\fi.
 }
 \cventry{Aug 2013\\Jun 2013}{Software Validation Engineering Intern}{Open Engineering}{Liège, Belgium}{}
 {
     Tested and validated the newly developed
     \ifnum\value{npages}>1
         \exref{https://www.open-engineering.com/index.php/products/finefsi-oofelie/}{\emph{FINE/FSI-OOFELIE}}
-        \else
+    \else
         fluid-structure interaction
     \fi
     solver.
