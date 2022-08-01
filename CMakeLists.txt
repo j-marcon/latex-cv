@@ -14,7 +14,7 @@ set(DOCS "us" "eu" "academic")
 set(AUXILIARY "preamble.tex" "publications.bib")
 list(TRANSFORM AUXILIARY PREPEND "${SOURCE_DIR}/auxiliary/")
 
-set(SECTIONS "affiliations" "education" "experience" "grants" "honours" "languages" "overview" "programming" "publications" "software" "volunteering")
+set(SECTIONS "affiliations" "education" "experience" "grants" "honours" "languages" "overview" "programming" "publications" "volunteering")
 list(TRANSFORM SECTIONS PREPEND "${SOURCE_DIR}/sections/")
 list(TRANSFORM SECTIONS APPEND ".tex")
 
