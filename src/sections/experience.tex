@@ -92,14 +92,17 @@
         tested and validated new features;
         generated software documentation\fi.
 }
-\cventry{Aug 2013\\Jun 2013}{Software Validation Engineering Intern}{Open Engineering}{Liège, Belgium}{}
-{
-    Tested and validated the newly developed
-    \ifnum\value{npages}>1
-        \exref{https://www.open-engineering.com/index.php/products/finefsi-oofelie/}{\emph{FINE/FSI-OOFELIE}}
-    \else
-        fluid-structure interaction
-    \fi
-    solver.
-}
+
+\ifnum\value{npages}>1
+    \cventry{Aug 2013\\Jun 2013}{Software Validation Engineering Intern}{Open Engineering}{Liège, Belgium}{}
+    {
+        Tested and validated the newly developed
+        \ifnum\value{npages}>1
+            \exref{https://www.open-engineering.com/index.php/products/finefsi-oofelie/}{\emph{FINE/FSI-OOFELIE}}
+        \else
+            fluid-structure interaction
+        \fi
+        solver.
+    }
+\fi
 }
