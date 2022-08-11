@@ -50,7 +50,4 @@ jobs:
       uses: softprops/action-gh-release@v1
       if: startsWith(github.ref, 'refs/tags/')
       with:
-        files: |
-          bin/marcon_julian_us.pdf
-          bin/marcon_julian_eu.pdf
-          bin/marcon_julian_academic.pdf
+        files: bin/*.pdf
