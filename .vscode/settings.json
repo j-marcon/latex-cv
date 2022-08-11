@@ -1,0 +1,14 @@
+{
+    "cSpell.dictionaryDefinitions": [
+        {
+            "name": "dictionary",
+            "path": "${workspaceFolder}/src/auxiliary/dictionary.txt"
+        }
+    ],
+    "cSpell.dictionaries": [
+        "dictionary"
+    ],
+    "latex-workshop.latex.outDir": "../build",
+    "terminal.integrated.defaultProfile.windows": "Developer PowerShell",
+    "editor.formatOnSave": false
+}
