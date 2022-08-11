@@ -51,6 +51,6 @@ jobs:
       if: startsWith(github.ref, 'refs/tags/')
       with:
         files: |
-          bin/us.pdf
-          bin/eu.pdf
-          bin/academic.pdf
+          bin/marcon_julian_us.pdf
+          bin/marcon_julian_eu.pdf
+          bin/marcon_julian_academic.pdf

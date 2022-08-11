@@ -59,7 +59,8 @@ foreach(DOC IN LISTS DOCS)
             DEPENDS "${DOC}.pdf")
 
     install(FILES "${BUILD_DIR}/${DOC}.pdf"
-            DESTINATION ".")
+            DESTINATION "."
+            RENAME "marcon_julian_${DOC}.pdf")
 
 endforeach()
 
