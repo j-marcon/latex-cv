@@ -29,7 +29,7 @@ This project has been tested on Microsoft Windows 11 as well as Ubuntu 18 (throu
 
 The documents may be compiled using the standard `CMake` build procedure.
 If `CV_ROOT` is the path to this repository, the build procedure would look like this:
-```
+```sh
 cd $CV_ROOT
 cmake -S . -B build            # generate the project build system
 cmake --build build --parallel # build the project
@@ -39,12 +39,12 @@ The last command will install the PDF documents in a `bin` directory by default.
 The `--install-prefix <dir>` option may be used with the generate command or `--prefix <dir>` with the install command to change the installation directory.
 
 To compile only one of the main documents, its name can be passed as a target to the build command, e.g.:
-```
+```sh
 cmake --build build --target us
 ```
 
 Alternatively, the documents may be compiled using `latexmk`, e.g.:
-```
+```sh
 cd src
 latexmk -lualatex us.tex
 ```
